@@ -12,5 +12,4 @@ function isPangram(string){
 
     return false;
 }
-
 console.log(isPangram('aaasdads sdasdsads dsdaa'));
