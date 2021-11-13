@@ -1,8 +1,7 @@
 /*
 Digital root is the recursive sum of all the digits in a number.
 
-Given n, take the sum of the digits of n. If that value has more than one digit, 
-continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.
+Given n, take the sum of the digits of n. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.
 
 Examples
     16  -->  1 + 6 = 7
@@ -13,7 +12,7 @@ Examples
 */
 
 export const digitalRoot = (n:number):number => {
-    let sum = n.toString().split('').reduce((acc, curr) => acc + parseInt(curr), 0)
+    let sum = n.toString().split('').reduce((acc, curr, key) => acc + parseInt(curr), 0)
     if(sum.toString().length !== 1){
       return digitalRoot(sum);
     }else{
